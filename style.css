@@ -59,6 +59,7 @@ section {
   text-shadow: 0 0 10px #000;
   text-align: left;
   padding-left: 20px;
+  
 }
 
 /* Second heading */
@@ -78,6 +79,8 @@ section {
   width: 42%;
   padding: 0 4%;
   text-align: left;
+  background-color: #323232;
+  color: #f2f2f2;
 }
 
 .dark {
@@ -102,10 +105,18 @@ section {
   padding: 0; /* Keep padding consistent */
 }
 
+.sec {
+    background-color: #323232;
+  color: #f2f2f2;
+}
+
 /* For mobile */
 @media (max-width: 768px) {
   .heading {
+    position: absolute;
     font-size: 250%;
+    text-align: center;
+    padding-top: 10%;
   }
   .heading-sm {
     font-size: 100%;
@@ -114,5 +125,8 @@ section {
     width: 100%;
     padding: 0%;
     text-align: center;
+  }
+  .parallax1 {
+    background: url(img/first_mobile.jpg);
   }
 }
