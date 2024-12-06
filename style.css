@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
+/* Ensure padding is included in total width calculations */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Rules for body, html tags */
-body, html{
+html, body {
   height: 100%;
   margin: 0;
-  font-family:  'Ubuntu', sans-serif;
-  line-height:  180%;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 180%;
   color: #666;
   text-align: center;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
 section {
   overflow: auto;
-  padding: 50px 80px;
+  padding: 50px 20px; /* Reduced horizontal padding to prevent overflow */
 }
 
 /* First Section */
@@ -27,18 +35,23 @@ section {
 }
 /* Third Section */
 .parallax3 {
-  background: url(img/third.jpg);
-  min-height: 40%;
+  background: url(img/Clock_Image.jpg);
+  min-height: 60%;
 }
-/* Last Section */
+/* Fourth Section */
 .parallax4 {
-  background: url(img/fourth.jpg);
+  background: url(img/Arabic.png);
+  min-height: 60%;
+}
+
+/* Last Section */
+.parallax5 {
+  background: url(img/Last_Image.jpg);
   min-height: 100%;
 }
 
-/* Rules for classes */
 /* Parallaxes */
-.parallax1,.parallax2,.parallax3,.parallax4 {
+.parallax1, .parallax2, .parallax3, .parallax4, .parallax5 {
   position: relative;
   opacity: .75;
   background-position: center;
@@ -59,7 +72,6 @@ section {
   text-shadow: 0 0 10px #000;
   text-align: left;
   padding-left: 20px;
-  
 }
 
 /* Second heading */
@@ -76,8 +88,8 @@ section {
 
 .two-col {
   float: left;
-  width: 42%;
-  padding: 0 4%;
+  width: 45%; /* Slightly reduced to avoid overflow */
+  padding: 0 2.5%; /* Adjusted padding to ensure total width stays <=100% */
   text-align: left;
   background-color: #323232;
   color: #f2f2f2;
@@ -85,7 +97,7 @@ section {
 
 .dark {
   overflow: auto;
-  padding: 50px 80px;
+  padding: 50px 20px; /* Reduced horizontal padding */
   background-color: #323232;
   color: #f2f2f2;
 }
@@ -93,40 +105,59 @@ section {
 .ending {
   position: absolute;
   color: #fff;
-  font-size: 250%; /* Matches existing percentage-based sizing */
-  top: 50%; /* Center vertically */
-  width: 100%; /* Spans the full width */
+  font-size: 250%;
+  top: 50%;
+  width: 100%;
   text-transform: uppercase;
-  letter-spacing: 5px; /* Matches other headings */
-  text-shadow: 0 0 10px #000; /* Consistent shadow style */
-  text-align: center; /* Matches centering used elsewhere */
-  line-height: 1.4; /* For readability in multi-line quotes */
-  transform: translateY(-50%); /* Proper vertical centering */
-  padding: 0; /* Keep padding consistent */
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px #000;
+  text-align: center;
+  line-height: 1.4;
+  transform: translateY(-50%);
+  padding: 0;
 }
 
 .sec {
-    background-color: #323232;
+  background-color: #323232;
   color: #f2f2f2;
 }
 
 /* For mobile */
 @media (max-width: 768px) {
   .heading {
-    position: absolute;
     font-size: 250%;
     text-align: center;
     padding-top: 10%;
   }
+
   .heading-sm {
     font-size: 100%;
   }
+
   .two-col {
     width: 100%;
     padding: 0%;
     text-align: center;
   }
+
   .parallax1 {
     background: url(img/first_mobile.jpg);
+  }
+
+  .parallax2 {
+    background: url(img/second_mobile.jpg);
+  }
+
+  .parallax5 {
+    background: url(img/last_image_mobile.jpg);
+  }
+
+  .parallax1, .parallax2, .parallax3, .parallax4, .parallax5 {
+    position: relative;
+    opacity: .75;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
