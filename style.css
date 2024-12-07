@@ -125,7 +125,7 @@ section {
 /* For mobile */
 @media (max-width: 768px) {
   .heading {
-    font-size: 250%;
+    font-size: 225%;
     text-align: center;
     padding-top: 10%;
   }
